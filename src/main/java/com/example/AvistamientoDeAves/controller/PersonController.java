@@ -23,7 +23,7 @@ public class PersonController {
         return personList;
     }
     @GetMapping("/searchName")
-    public Person getSearchPerson(@RequestBody String dni){
+    public Person getSearchPerson(@RequestParam String dni){
         for (Person person1:
              personList) {
             if(dni.equals(person1.getDni())){
